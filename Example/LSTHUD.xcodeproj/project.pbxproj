@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2AC5C4976DCE067B9A503324 /* Pods_LSTHUD_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E7D5D6F695DF46ACCFE9D2 /* Pods_LSTHUD_Tests.framework */; };
+		31EFC11522FEBACF004625FC /* LSTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EFC11322FEBACF004625FC /* LSTHUD.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		18F75FF1A882B4260177953F /* Pods-LSTHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTHUD_Tests.release.xcconfig"; path = "Target Support Files/Pods-LSTHUD_Tests/Pods-LSTHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2E4B51B8AEA08A6E024AD33B /* Pods_LSTHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSTHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31EFC11322FEBACF004625FC /* LSTHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTHUD.m; sourceTree = "<group>"; };
+		31EFC11422FEBACF004625FC /* LSTHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTHUD.h; sourceTree = "<group>"; };
 		5D684827BF879EEF97A464D5 /* Pods-LSTHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTHUD_Example.release.xcconfig"; path = "Target Support Files/Pods-LSTHUD_Example/Pods-LSTHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LSTHUD_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSTHUD_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,11 +65,11 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88E7D5D6F695DF46ACCFE9D2 /* Pods_LSTHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSTHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9BD0B78F43737CF76D005EA /* LSTHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LSTHUD.podspec; path = ../LSTHUD.podspec; sourceTree = "<group>"; };
+		B9BD0B78F43737CF76D005EA /* LSTHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LSTHUD.podspec; path = ../LSTHUD.podspec; sourceTree = "<group>"; };
 		BBDE23823F67F17F1CCDB655 /* Pods-LSTHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTHUD_Example.debug.xcconfig"; path = "Target Support Files/Pods-LSTHUD_Example/Pods-LSTHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CB7385826E89649BF4F90D9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CB7385826E89649BF4F90D9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CBF5BDD3B6C926F37910F263 /* Pods-LSTHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSTHUD_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LSTHUD_Tests/Pods-LSTHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FE14356FD283C46072423E15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FE14356FD283C46072423E15 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31EFC11222FEBABD004625FC /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				31EFC11422FEBACF004625FC /* LSTHUD.h */,
+				31EFC11322FEBACF004625FC /* LSTHUD.m */,
+			);
+			name = Code;
+			path = ../../LSTHUD/Classes/Code;
+			sourceTree = "<group>";
+		};
 		3931AAF2985C936B7AC6EA24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +116,6 @@
 				CBF5BDD3B6C926F37910F263 /* Pods-LSTHUD_Tests.debug.xcconfig */,
 				18F75FF1A882B4260177953F /* Pods-LSTHUD_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +156,7 @@
 		6003F593195388D20070C39A /* Example for LSTHUD */ = {
 			isa = PBXGroup;
 			children = (
+				31EFC11222FEBABD004625FC /* Code */,
 				6003F59C195388D20070C39A /* LSTAppDelegate.h */,
 				6003F59D195388D20070C39A /* LSTAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -248,6 +261,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "490790096@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = F8DZH6Y62F;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +274,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -302,11 +319,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LSTHUD_Example/Pods-LSTHUD_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LSTCategory/LSTCategory.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTHUD/LSTHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTCategory.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -367,6 +388,7 @@
 				6003F59E195388D20070C39A /* LSTAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* LSTViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				31EFC11522FEBACF004625FC /* LSTHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +516,7 @@
 			baseConfigurationReference = BBDE23823F67F17F1CCDB655 /* Pods-LSTHUD_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F8DZH6Y62F;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSTHUD/LSTHUD-Prefix.pch";
 				INFOPLIST_FILE = "LSTHUD/LSTHUD-Info.plist";
@@ -510,6 +533,7 @@
 			baseConfigurationReference = 5D684827BF879EEF97A464D5 /* Pods-LSTHUD_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F8DZH6Y62F;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LSTHUD/LSTHUD-Prefix.pch";
 				INFOPLIST_FILE = "LSTHUD/LSTHUD-Info.plist";

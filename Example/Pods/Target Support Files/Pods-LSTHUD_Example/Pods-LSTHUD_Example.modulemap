@@ -1,0 +1,6 @@
+framework module Pods_LSTHUD_Example {
+  umbrella header "Pods-LSTHUD_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

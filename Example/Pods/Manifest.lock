@@ -1,0 +1,33 @@
+PODS:
+  - LSTCategory (0.1.08081542):
+    - LSTCategory/Code (= 0.1.08081542)
+  - LSTCategory/Code (0.1.08081542)
+  - LSTHUD (0.1.08101636):
+    - LSTCategory
+    - LSTHUD/Code (= 0.1.08101636)
+    - MBProgressHUD
+  - LSTHUD/Code (0.1.08101636):
+    - LSTCategory
+    - MBProgressHUD
+  - MBProgressHUD (1.1.0)
+
+DEPENDENCIES:
+  - LSTHUD (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LSTCategory
+    - MBProgressHUD
+
+EXTERNAL SOURCES:
+  LSTHUD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LSTCategory: 46dfbe0228f9b18d30ca9bd5f00fb60965162fa9
+  LSTHUD: 896fa0cf9e5f8ee0cc456f260273fec927ff0101
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+
+PODFILE CHECKSUM: 3f1cab7028999ed8087275d03acb4e85acfff613
+
+COCOAPODS: 1.7.2

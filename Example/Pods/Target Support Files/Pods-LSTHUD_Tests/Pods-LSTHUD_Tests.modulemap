@@ -1,0 +1,6 @@
+framework module Pods_LSTHUD_Tests {
+  umbrella header "Pods-LSTHUD_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
