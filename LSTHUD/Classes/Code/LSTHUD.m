@@ -33,7 +33,7 @@ static LSTHUD *singleInstance = nil;
     hud.label.text = message?message:@"";
     hud.label.font = [UIFont systemFontOfSize:15];
     hud.removeFromSuperViewOnHide = YES;
-    hud.userInteractionEnabled = NO;
+//    hud.userInteractionEnabled = NO;
     
     return hud;
 }
@@ -186,51 +186,27 @@ static LSTHUD *singleInstance = nil;
 //    [MBProgressHUD hideAllHUDsForView:[self getCurrentUIVC].view animated:YES];
 }
 //获取当前屏幕显示的viewcontroller
-+ (UIViewController *)getCurrentWindowVC {
-    UIViewController *result = nil;
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tempWindow in windows)
-        {
-            if (tempWindow.windowLevel == UIWindowLevelNormal)
-            {
-                window = tempWindow;
-                break;
++ (UIViewController *)getCurrentUIVC {
+    //获得当前活动窗口的根视图
+    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (1){
+        //根据不同的页面切换方式，逐步取得最上层的viewController
+        if ([vc isKindOfClass:[UITabBarController class]]) {
+            vc = ((UITabBarController*)vc).selectedViewController;
+        }
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = ((UINavigationController*)vc).visibleViewController;
+            if ([vc isKindOfClass:[UITabBarController class]]) {
+                vc = ((UITabBarController*)vc).selectedViewController;
             }
         }
-    }
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-    {
-        result = nextResponder;
-    }
-    else
-    {
-        result = window.rootViewController;
-    }
-    return  result;
-}
-+ (UIViewController *)getCurrentUIVC {
-    UIViewController  *superVC = [[self class]  getCurrentWindowVC ];
-    
-    if ([superVC isKindOfClass:[UITabBarController class]]) {
-        
-        UIViewController  *tabSelectVC = ((UITabBarController*)superVC).selectedViewController;
-        
-        if ([tabSelectVC isKindOfClass:[UINavigationController class]]) {
-            
-            return ((UINavigationController*)tabSelectVC).viewControllers.lastObject;
+        if (vc.presentedViewController) {
+            vc = vc.presentedViewController;
+        }else{
+            break;
         }
-        return tabSelectVC;
-    }else
-        if ([superVC isKindOfClass:[UINavigationController class]]) {
-            
-            return ((UINavigationController*)superVC).viewControllers.lastObject;
-        }
-    return superVC;
+    }
+    return vc;
 }
 
 //创建单例
