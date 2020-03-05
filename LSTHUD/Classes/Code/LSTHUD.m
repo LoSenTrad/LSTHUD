@@ -26,15 +26,17 @@ static LSTHUD *singleInstance = nil;
 //    LSTHUB *temp = [LSTHUB shareLSTHUB];
     [LSTHUD hideHUD];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.8];
-//    hud.margin = 50;
-    hud.bezelView.alpha = 0.8;
+    hud.margin = 20;
+//    hud.bezelView.alpha = 0.8;
     hud.contentColor = [UIColor whiteColor];
     hud.label.text = message?message:@"";
     hud.label.font = [UIFont systemFontOfSize:15];
     hud.removeFromSuperViewOnHide = YES;
 //    hud.userInteractionEnabled = NO;
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     
+   hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.35];
+
     return hud;
 }
 //创建自定义icon hub
@@ -44,7 +46,7 @@ static LSTHUD *singleInstance = nil;
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     hud.mode = MBProgressHUDModeCustomView;
 //    hud.margin = 25;
-    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.8];
+    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.35];
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.alpha = 0.8;
     hud.minSize  = CGSizeMake(30,30);
@@ -64,7 +66,7 @@ static LSTHUD *singleInstance = nil;
         hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
         hud.mode = MBProgressHUDModeCustomView;
     }
-    hud.activityIndicatorColor = [UIColor blackColor];
+//    hud.activityIndicatorColor = [UIColor blackColor];
     //    hud.margin = 25;
     hud.bezelView.backgroundColor = [UIColor blackColor];
     hud.contentColor = [UIColor whiteColor];

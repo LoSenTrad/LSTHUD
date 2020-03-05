@@ -1,6 +1,6 @@
 {
   "name": "LSTHUD",
-  "version": "0.1.08101636",
+  "version": "0.1.09231556",
   "summary": "LSTHUD.",
   "description": "A short description of LSTHUD.",
   "homepage": "https://github.com/LoSenTrad/LSTHUD.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LoSenTrad/LSTHUD.git",
-    "tag": "0.1.08101636"
+    "tag": "0.1.09231556"
   },
   "platforms": {
     "ios": "8.0"
