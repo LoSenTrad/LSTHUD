@@ -70,7 +70,7 @@ static CGFloat LSTHUDBGAlpha = 0.4;
     }
 //    hud.activityIndicatorColor = [UIColor blackColor];
     //    hud.margin = 25;
-    hud.bezelView.backgroundColor = UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
+    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.alpha = 1;
     hud.minSize  = CGSizeMake(LST_kSCREEN_WIDTH,20);
