@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LSTHUD'
-  s.version          = '0.2.03051158'
+  s.version          = '0.2.04210940'
   s.summary          = 'LSTHUD.'
 
 # This description is used to generate tags and improve search results.
@@ -46,4 +46,5 @@ end
   # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'MBProgressHUD'
     s.dependency 'LSTCategory'
+    
 end

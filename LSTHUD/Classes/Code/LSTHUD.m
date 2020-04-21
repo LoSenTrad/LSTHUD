@@ -10,6 +10,8 @@
 
 
 static LSTHUD *singleInstance = nil;
+static CGFloat LSTHUDBGAlpha = 0.4;
+
 
 /**
  物理屏幕尺寸
@@ -35,7 +37,7 @@ static LSTHUD *singleInstance = nil;
 //    hud.userInteractionEnabled = NO;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     
-   hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.35];
+   hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
 
     return hud;
 }
@@ -45,8 +47,8 @@ static LSTHUD *singleInstance = nil;
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:iconName]];
     hud.mode = MBProgressHUDModeCustomView;
-//    hud.margin = 25;
-    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:0.35];
+
+    hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.alpha = 0.8;
     hud.minSize  = CGSizeMake(30,30);
@@ -68,7 +70,7 @@ static LSTHUD *singleInstance = nil;
     }
 //    hud.activityIndicatorColor = [UIColor blackColor];
     //    hud.margin = 25;
-    hud.bezelView.backgroundColor = [UIColor blackColor];
+    hud.bezelView.backgroundColor = UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
     hud.contentColor = [UIColor whiteColor];
     hud.bezelView.alpha = 1;
     hud.minSize  = CGSizeMake(LST_kSCREEN_WIDTH,20);
