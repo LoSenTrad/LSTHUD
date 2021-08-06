@@ -10,7 +10,7 @@
 
 
 static LSTHUD *singleInstance = nil;
-static CGFloat LSTHUDBGAlpha = 0.4;
+static CGFloat LSTHUDBGAlpha = 0.9;
 
 
 /**
@@ -50,7 +50,7 @@ static CGFloat LSTHUDBGAlpha = 0.4;
 
     hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
     hud.contentColor = [UIColor whiteColor];
-    hud.bezelView.alpha = 0.8;
+//     hud.bezelView.alpha = 0.8;
     hud.minSize  = CGSizeMake(30,30);
     hud.userInteractionEnabled = NO;
     hud.animationType = MBProgressHUDAnimationFade;
@@ -72,7 +72,7 @@ static CGFloat LSTHUDBGAlpha = 0.4;
     //    hud.margin = 25;
     hud.bezelView.backgroundColor = [UIColor lst_ColorWith8BitRed:0 green:0 blue:0 alpha:LSTHUDBGAlpha];
     hud.contentColor = [UIColor whiteColor];
-    hud.bezelView.alpha = 1;
+//     hud.bezelView.alpha = 1;
     hud.minSize  = CGSizeMake(LST_kSCREEN_WIDTH,20);
 //    hud.size = CGSizeMake(LSTScreenWidth(),20);
     hud.userInteractionEnabled = NO;
