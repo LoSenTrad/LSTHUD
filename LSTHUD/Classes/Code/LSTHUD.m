@@ -32,6 +32,7 @@ static CGFloat LSTHUDBGAlpha = 0.9;
 //    hud.bezelView.alpha = 0.8;
     hud.contentColor = [UIColor whiteColor];
     hud.label.text = message?message:@"";
+    hud.label.numberOfLines = 0;
     hud.label.font = [UIFont systemFontOfSize:15];
     hud.removeFromSuperViewOnHide = YES;
 //    hud.userInteractionEnabled = NO;
